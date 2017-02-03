@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="App" lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets.min.css" type="text/css" />
+    <link rel="stylesheet" href="app.min.css" type="text/css" />
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div ng-include="'nav.html'"></div>
+
+<!-- Content -->
+<div class="container">
+	
+	<h1>My app</h1>
+
+	<ng-view></ng-view>
+
+</div>
+
+</body>
+
+<!-- Script -->
+<script src="assets.min.js"></script>
+<script src="app.min.js"></script>
+<script src="templates.js"></script>
+
+</html>

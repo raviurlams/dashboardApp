@@ -1,0 +1,25 @@
+{
+  "name": "Dashboard App",
+  "authors": [
+    "Ravindra Urlam <raviurlams@gmail.com>"
+  ],
+  "color": "true",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2",
+    "angular-resource": "^1.5.2"
+  }
+}
