@@ -18,7 +18,7 @@ Features:-
 
 Quick start
 -----------
-
+rm -rf node_modules dist tmp
 npm install  
 bower install  
 gulp
