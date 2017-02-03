@@ -23,7 +23,7 @@ Quick start
 `bower install`  
 `gulp`
 
- Now browse to the app at localhost:8080/index.html.
+ Now browse to the app at #localhost:8080/index.html.
 
 Usage
 -----
