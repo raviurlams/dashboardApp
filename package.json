@@ -1,5 +1,5 @@
 {
-  "name": "Dashboard App",
+  "name": "dashboardApp",
   "version": "1.0.0",
   "description": "Dashboard App",
   "main": "gulpfile.js",
