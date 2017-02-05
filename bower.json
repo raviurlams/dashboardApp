@@ -1,5 +1,5 @@
 {
-  "name": "Dashboard App",
+  "name": "dashboardApp",
   "authors": [
     "Ravindra Urlam <raviurlams@gmail.com>"
   ],
@@ -20,6 +20,7 @@
     "bootstrap": "^3.3.6",
     "angular": "^1.5.2",
     "angular-route": "^1.5.2",
-    "angular-resource": "^1.5.2"
+    "angular-resource": "^1.5.2",
+    "angular-ui-bootstrap": "^2.5.0"
   }
 }
