@@ -5,15 +5,16 @@
     <title>Dashboard app</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <base href="/" />
     <!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets.min.css" type="text/css" />
     <link rel="stylesheet" href="app.min.css" type="text/css" />
-    <base href="/" />
+    
 </head>
 
-<body>
+<body ng-app="App" ng-cloak>
     <!-- Wrapper-->
     <div class="wrapper">
         <!-- Header-->
@@ -22,7 +23,7 @@
                 <div class="navbar-header">
                     <div id="mobile-menu">
                         <div class="left-nav-toggle">
-                            <a href="#">
+                            <a href="javascript:void(0)">
                                 <i class="stroke-hamburgermenu"></i>
                             </a>
                         </div>
@@ -60,24 +61,24 @@
                         <a href="#">Level 1</a>
                     </li>
                     <li>
-                        <a href="#monitoring" data-toggle="collapse" aria-expanded="false">
+                        <a href="monitoring" data-toggle="collapse" aria-expanded="false">
                         Level 1<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
                     </a>
                         <ul id="monitoring" class="nav nav-second collapse">
-                            <li><a href="#"> Test 1</a></li>
-                            <li><a href="#"> Test 2</a></li>
-                            <li><a href="#"> Test 3</a></li>
+                            <li><a href="javascript:void(0)"> Test 1</a></li>
+                            <li><a href="javascript:void(0)"> Test 2</a></li>
+                            <li><a href="javascript:void(0)"> Test 3</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#uielements" data-toggle="collapse" aria-expanded="false">
+                        <a href="uielements" data-toggle="collapse" aria-expanded="false">
                         Level 1<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
                     </a>
                         <ul id="uielements" class="nav nav-second collapse">
-                            <li><a href="#">Test 2</a></li>
-                            <li><a href="#">Test 3</a></li>
-                            <li><a href="#">Test 4</a></li>
-                            <li><a href="#">Test 5</a></li>
+                            <li><a href="javascript:void(0)">Test 2</a></li>
+                            <li><a href="javascript:void(0)">Test 3</a></li>
+                            <li><a href="javascript:void(0)">Test 4</a></li>
+                            <li><a href="javascript:void(0)">Test 5</a></li>
                         </ul>
                     </li>
                     <li>
@@ -85,12 +86,12 @@
                         Basic <span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
                     </a>
                         <ul id="extras" class="nav nav-second collapse">
-                            <li><a href="#">Test 2</a></li>
-                            <li><a href="#">Test 2</a></li>
+                            <li><a href="javascript:void(0)">Test 2</a></li>
+                            <li><a href="javascript:void(0)">Test 2</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="javascript:void(0)">
                             <span class="badge pull-right">2</span> Versions
                         </a>
                     </li>
@@ -111,7 +112,7 @@
         <!-- End main Dashboard-->
         <!-- bottom-->
         <nav class="navbar navbar-fixed-bottom">
-            <div class="container">
+            <div class="container-fluid">
                 <div ng-if="isLogin" class="pull-right" style="margin-top: 30px;">
                     <a href="/signUp">Register</a>
                     <a href="/login">Log In</a>

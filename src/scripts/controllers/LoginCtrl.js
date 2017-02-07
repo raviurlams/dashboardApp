@@ -1,7 +1,7 @@
-App.controller('LoginCtrl', function($scope, $rootScope, $location) {
-    $rootScope.isLogin = false;
-    $rootScope.isDisplayLeftNav = false;
+App.controller('LoginCtrl', function($scope, $rootScope, $location) {    
     $scope.doSignIn = function(form) {
+        $rootScope.isLogin = false;
+        $rootScope.isDisplayLeftNav = false;
         console.log(form)
         if (form.$valid) {
             $rootScope.isLogin = true;

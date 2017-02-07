@@ -23,10 +23,12 @@ var assets = {
     'assets/angular/angular.min.js',
     'assets/angular-route/angular-route.min.js',
     'assets/angular-resource/angular-resource.min.js',
-    'assets/bootstrap/dist/js/bootstrap.min.js'
+    'assets/angular-bootstrap/ui-bootstrap.min.js',
+    'assets/angular-bootstrap/ui-bootstrap-tpls.min.js'
   ],
   styles: [
-    'assets/bootstrap/dist/css/bootstrap.min.css'
+    'assets/bootstrap/dist/css/bootstrap.min.css',    
+    'assets/angular-bootstrap/ui-bootstrap-csp.css'
   ]
 };
 

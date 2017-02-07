@@ -6,7 +6,7 @@ angular.module('templates', []);
 /*
  Main application module.
 */
-var App = angular.module('App', ['ngRoute', 'ngResource', 'templates']);
+var App = angular.module('App', ['ngRoute', 'ngResource', 'templates','ui.bootstrap']);
 
 /*
  App configuration. Enable things as needed.
@@ -22,12 +22,8 @@ App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvide
     // $httpProvider.interceptors.push('HttpInterceptor');
 
     // $httpProvider.defaults.headers.common.Accept = 'application/json';
-    $locationProvider.html5Mode(true);
-    $routeProvider
-        .when('/', {
-            templateUrl: 'Login.html',
-            controller: 'LoginCtrl'
-        })
+    //$locationProvider.html5Mode(true).hashPrefix('#');
+    $routeProvider        
         .when('/dashboard', {
             templateUrl: 'home.html',
             controller: 'HomeCtrl'
@@ -39,7 +35,7 @@ App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvide
             controller: 'signUpCtrl'
         })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/login'
         });
 
 });
