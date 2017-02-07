@@ -6,405 +6,169 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
     <link rel="stylesheet" href="assets.min.css" type="text/css" />
     <link rel="stylesheet" href="app.min.css" type="text/css" />
 </head>
 
 <body>
-    <!-- Header directive start -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <div id="mobile-view-menu">
-                    <div class="left-nav-toggle">
-                        <a href="#">
-                            <i class="stroke-dashboardmenu"></i>
-                        </a>
+    <!-- Wrapper-->
+    <div class="wrapper">
+        <!-- Header-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div id="mobile-menu">
+                        <div class="left-nav-toggle">
+                            <a href="#">
+                                <i class="stroke-hamburgermenu"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <a class="navbar-brand" href="/">
-                    Project                    
+                    <a class="navbar-brand" href="index.html">
+                    LUNA
+                    <span>v.1.2</span>
                 </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <div class="left-nav-toggle">
-                    <a href="">
-                        <i class="stroke-dashboardmenu"></i>
-                    </a>
                 </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class=" profil-link">
-                        <a href="login.html">
-                            <span class="profile-address">project@company.io</span>
-                            <img src="images/profile.jpg" class="img-circle" alt="">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="left-nav-toggle">
+                       <button class="toggle-button"><i class="fa fa-bars"></i></button>
+                    </div>
+                    <form class="navbar-form navbar-left">
+                        <input type="text" class="form-control" placeholder="Search data for analysis" style="width: 175px">
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="versions.html">Versions
+                            <span class="label label-warning pull-right">2</span>
+                        </a>
+                        </li>
+                        <li class=" profil-link">
+                            <a href="login.html">
+                                <span class="profile-address">luna@company.io</span>
+                                <img src="/images/profile.jpg" class="img-circle" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End header-->
+        <!-- Navigation-->
+        <aside class="navigation">
+            <nav>
+                <ul class="nav luna-nav">
+                    <li class="nav-category">
+                        Main
+                    </li>
+                    <li class="active">
+                        <a href="index.html">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#monitoring" data-toggle="collapse" aria-expanded="false">
+                        Monitoring<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="monitoring" class="nav nav-second collapse">
+                            <li><a href="metrics.html"> Metrics</a></li>
+                            <li><a href="usage.html"> Usage</a></li>
+                            <li><a href="activity.html"> Activity</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-category">
+                        UI Elements
+                    </li>
+                    <li>
+                        <a href="#uielements" data-toggle="collapse" aria-expanded="false">
+                        General<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="uielements" class="nav nav-second collapse">
+                            <li><a href="panels.html">Panels</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="tabs.html">Tabs</a></li>
+                            <li><a href="modals.html">Modals</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="gridSystem.html">Grid system</a></li>
+                            <li><a href="draggable.html">Draggable</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tables" data-toggle="collapse" aria-expanded="false">
+                        Tables design<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="tables" class="nav nav-second collapse">
+                            <li><a href="tableStyles.html">Table styles</a></li>
+                            <li><a href="dataTables.html">Data Tables</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="formElements.html"> Form elements </a>
+                    </li>
+                    <li>
+                        <a href="#charts" data-toggle="collapse" aria-expanded="false">
+                        Charts and graphs<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="charts" class="nav nav-second collapse">
+                            <li><a href="flotCharts.html">Flot charts</a></li>
+                            <li><a href="sparkline.html">Sparkline</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-category">
+                        App Pages
+                    </li>
+                    <li>
+                        <a href="#extras" data-toggle="collapse" aria-expanded="false">
+                        Basic <span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="extras" class="nav nav-second collapse">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="nestableList.html">List</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#common" data-toggle="collapse" aria-expanded="false">
+                        Common <span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                    </a>
+                        <ul id="common" class="nav nav-second collapse">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="forgotPassword.html">Forgot password</a></li>
+                            <li><a href="error.html">Error page</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="versions.html">
+                            <span class="badge pull-right">2</span> Versions
                         </a>
                     </li>
+                    <li class="nav-info">
+                        <i class="pe pe-7s-shield text-accent"></i>
+                        <div class="m-t-xs">
+                            <span class="c-white">LUNA</span> admin theme with Dark UI style for monitoring and administration web applications.
+                        </div>
+                    </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Ends Header directive start -->
-    <!-- start left menu -->
-    <aside class="navigation">
-        <nav>
-            <ul class="nav project-nav">
-                <li class="nav-category">
-                    Main
-                </li>
-                <li class="active">
-                    <a href="index.html">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#monitoring" data-toggle="collapse" aria-expanded="false">
-                        Monitoring<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="monitoring" class="nav nav-second collapse">
-                        <li><a href="metrics.html"> Metrics</a></li>
-                        <li><a href="usage.html"> Usage</a></li>
-                        <li><a href="activity.html"> Activity</a></li>
-                    </ul>
-                </li>
-                <li class="nav-category">
-                    UI Elements
-                </li>
-                <li>
-                    <a href="#uielements" data-toggle="collapse" aria-expanded="false">
-                        General<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="uielements" class="nav nav-second collapse">
-                        <li><a href="panels.html">Panels</a></li>
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="icons.html">Icons</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="tabs.html">Tabs</a></li>
-                        <li><a href="modals.html">Modals</a></li>
-                        <li><a href="alerts.html">Alerts</a></li>
-                        <li><a href="gridSystem.html">Grid system</a></li>
-                        <li><a href="draggable.html">Draggable</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#tables" data-toggle="collapse" aria-expanded="false">
-                        Tables design<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="tables" class="nav nav-second collapse">
-                        <li><a href="tableStyles.html">Table styles</a></li>
-                        <li><a href="dataTables.html">Data Tables</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="formElements.html"> Form elements </a>
-                </li>
-                <li>
-                    <a href="#charts" data-toggle="collapse" aria-expanded="false">
-                        Charts and graphs<span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="charts" class="nav nav-second collapse">
-                        <li><a href="flotCharts.html">Flot charts</a></li>
-                        <li><a href="sparkline.html">Sparkline</a></li>
-                    </ul>
-                </li>
-                <li class="nav-category">
-                    App Pages
-                </li>
-                <li>
-                    <a href="#extras" data-toggle="collapse" aria-expanded="false">
-                        Basic <span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="extras" class="nav nav-second collapse">
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="nestableList.html">List</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#common" data-toggle="collapse" aria-expanded="false">
-                        Common <span class="sub-nav-icon"> <i class="stroke-arrow"></i> </span>
-                    </a>
-                    <ul id="common" class="nav nav-second collapse">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="forgotPassword.html">Forgot password</a></li>
-                        <li><a href="error.html">Error page</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="versions.html">
-                        <span class="badge pull-right">2</span> Versions
-                    </a>
-                </li>
-                <li class="nav-info">
-                    <i class="pe pe-7s-shield text-accent"></i>
-                    <div class="m-t-xs">
-                        <span class="c-white">PROJECT</span> admin theme with Dark UI style for monitoring and administration web applications.
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <!-- ends left menu -->
-
-	<!-- starts mainSection -->
-	<section class="content">
+            </nav>
+        </aside>
+        <!-- End navigation-->
+        <!-- main Dashboard-->
+        <section class="content">
             <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="view-header">
-                            <div class="pull-right text-right" style="line-height: 14px">
-                                <small>Luna Admin Theme<br>Dashboard<br> <span class="c-white">v.1.2</span></small>
-                            </div>
-                            <div class="header-icon">
-                                <i class="pe page-header-icon pe-7s-shield"></i>
-                            </div>
-                            <div class="header-title">
-                                <h3 class="m-b-xs">Luna Admin Theme</h3>
-                                <small>
-                                    Special minimal admin theme with Dark UI style for monitoring or administration web applications.
-                                </small>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-2 col-xs-6">
-                        <div class="panel panel-filled">
-
-                            <div class="panel-body">
-                                <h2 class="m-b-none">
-                                    206 <span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span>
-                                </h2>
-                                <div class="small">% New Sessions</div>
-                                <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Updated: <span class="c-white">10:22pm</span>  </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-xs-6">
-                        <div class="panel panel-filled">
-                            <div class="panel-body">
-                                <h2 class="m-b-none">
-                                    140 <span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> 5%</span>
-                                </h2>
-                                <div class="small">Total visitors</div>
-                                <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Updated: <span class="c-white">9:10am</span> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-xs-6">
-                        <div class="panel panel-filled">
-                            <div class="panel-body">
-                                <h2 class="m-b-none">
-                                    262 <span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +56%</span>
-                                </h2>
-                                <div class="small">Total users</div>
-                                <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Updated: <span class="c-white">05:42pm</span> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-xs-6">
-                        <div class="panel panel-filled">
-                            <div class="panel-body">
-                                <h2 class="m-b-none">
-                                    62% <span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +18%</span>
-                                </h2>
-                                <div class="small">Bounce Rate</div>
-                                <div class="slight m-t-sm"><i class="fa fa-clock-o"> </i> Updated: <span class="c-white">04:00am</span> </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-xs-12">
-                        <div class="panel panel-filled" style="position:relative;height: 114px">
-                            <div style="position: absolute;bottom: 0;left: 0;right: 0">
-                                <span class="sparkline"><canvas style="display: inline-block; width: 163px; height: 47px; vertical-align: top;" width="163" height="47"></canvas></span>
-                            </div>
-                            <div class="panel-body">
-                                <div class="m-t-sm">
-                                    <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-xs">See locations</a>
-                                    </div>
-                                    <div class="c-white"><span class="label label-accent">+45</span> New visitor</div>
-                                    <span class="small c-white">120,312 <i class="fa fa-play fa-rotate-270 text-warning"> </i> -22%</span>
-                                    <!--<span class="sparkline"></span>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <div class="panel-body">
-                                <h1 class="m-t-md m-b-xs" style="margin-top: 30px">
-                                    <i class="pe pe-7s-global text-warning"> </i>
-                                    1 460 ,00 <span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> -22%</span>
-                                </h1>
-                                <div class="small">
-                                    <span class="c-white">Total users</span> from the beginning of activity. See detailed charts for more information locations and traffic source.
-                                </div>
-                                <div class="m-t-sm">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <small class="c-white">
-                                            </small>
-                                            <div class="sparkline3"><canvas style="display: inline-block; width: 133px; height: 70px; vertical-align: top;" width="133" height="70"></canvas></div>
-                                            <small class="slight">
-                                            </small>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="panel panel-filled">
-                            <div class="row">
-                                <div class="col-md-4">
-
-                                    <div class="panel-body h-200 list">
-                                        <div class="stats-title pull-left">
-                                            <h4>Traffic source</h4>
-                                        </div>
-                                        <div class="m-t-xl">
-                                            <small>
-                                                More than 30% percent of users come from direct links. Check details page for more information.
-                                            </small>
-                                        </div>
-
-
-                                        <div class="progress m-t-xs full progress-small">
-                                            <div style="width: 35%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="35" role="progressbar" class=" progress-bar progress-bar-warning">
-                                                <span class="sr-only">35% Complete (success)</span>
-                                            </div>
-                                        </div>
-
-
-
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <small class="stat-label">Today</small>
-                                                <h4 class="m-t-xs">170,20 <i class="fa fa-level-up text-warning"></i></h4>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <small class="stat-label">Last month %</small>
-                                                <h4 class="m-t-xs">%20,20 <i class="fa fa-level-down c-white"></i></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="panel-body">
-                                        <div class="text-center slight">
-                                        </div>
-
-                                        <div class="flot-chart" style="height: 160px;margin-top: 5px">
-                                            <div class="flot-chart-content" id="flot-line-chart" style="padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 133px; height: 160px;" width="133" height="160"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 26px; top: 144px; left: 15px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 26px; top: 144px; left: 45px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 26px; top: 144px; left: 76px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 26px; top: 144px; left: 106px; text-align: center;">6</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 131px; left: 6px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 98px; left: 0px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 66px; left: 0px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 33px; left: 0px; text-align: right;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 0px; text-align: right;">80</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 133px; height: 160px;" width="133" height="160"></canvas></div>
-                                        </div>
-
-                                        <div class="small text-center">All active users from last month.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="panel">
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Phone</th>
-                                            <th>Street Address</th>
-                                            <th>% Share</th>
-                                            <th>City</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Abraham</td>
-                                            <td>076 9477 4896</td>
-                                            <td>294-318 Duis Ave</td>
-                                            <td><div class="sparkline8"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div> </td>
-                                            <td>Vosselaar</td>
-                                            <td><a href="#" class="btn btn-default btn-xs">View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Phelan</td>
-                                            <td>0500 034548</td>
-                                            <td>680-1097 Mi Rd.</td>
-                                            <td><div class="sparkline10"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
-                                            <td>Lavoir</td>
-                                            <td><a href="#" class="btn btn-default btn-xs active">View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Raya</td>
-                                            <td>(01315) 27698</td>
-                                            <td>Ap #289-8161 In Avenue</td>
-                                            <td><div class="sparkline11"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
-                                            <td>Santomenna</td>
-                                            <td><a href="#" class="btn btn-default btn-xs">View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Azalia</td>
-                                            <td>0500 854198</td>
-                                            <td>226-4861 Augue. St.</td>
-                                            <td><div class="sparkline12"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
-                                            <td>Newtown</td>
-                                            <td><a href="#" class="btn btn-default btn-xs">View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garth</td>
-                                            <td>(01662) 59083</td>
-                                            <td>3219 Elit Avenue</td>
-                                            <td><div class="sparkline13"><canvas width="17" height="17" style="display: inline-block; width: 17px; height: 17px; vertical-align: top;"></canvas></div></td>
-                                            <td>Ternitz</td>
-                                            <td><a href="#" class="btn btn-default btn-xs">View</a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-
-                        <div class="panel panel-b-accent m-t-sm">
-                            <div class="panel-body text-center p-m">
-                                <h2 class="font-light">
-                                    +280k downloads
-                                </h2>
-                                <small>New downloads from the last month.</small>
-                                <br>
-                                120,312 <span class="slight"><i class="fa fa-play fa-rotate-270 c-white"> </i> -22%</span>
-                                <div class="sparkline7 m-t-xs"><canvas style="display: inline-block; width: 123px; height: 75px; vertical-align: top;" width="123" height="75"></canvas></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+                <ng-view></ng-view>
             </div>
-    </section>
-
-	<!-- ends mainSection -->
-
-
-    <!-- Content -->
-    <div class="container">
-        <ng-view></ng-view>
+        </section>
+        <!-- End main Dashboard-->
+        <!-- bottom-->
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid">
+                Sign Up Log In
+            </div>
+        </nav>
+        <!-- end bottom-->
     </div>
 </body>
 <!-- Script -->
