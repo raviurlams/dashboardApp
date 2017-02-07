@@ -11,22 +11,32 @@ var App = angular.module('App', ['ngRoute', 'ngResource', 'templates']);
 /*
  App configuration. Enable things as needed.
 */
-App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvider){
+App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvider, $locationProvider) {
 
     var enableDebug = localStorage.debug == true; // jshint ignore:line
 
     $logProvider.debugEnabled(enableDebug);
-    
+
     $compileProvider.debugInfoEnabled(enableDebug);
 
     // $httpProvider.interceptors.push('HttpInterceptor');
 
     // $httpProvider.defaults.headers.common.Accept = 'application/json';
-
+    $locationProvider.html5Mode(true);
     $routeProvider
         .when('/', {
+            templateUrl: 'Login.html',
+            controller: 'LoginCtrl'
+        })
+        .when('/dashboard', {
             templateUrl: 'home.html',
             controller: 'HomeCtrl'
+        }).when('/login', {
+            templateUrl: 'Login.html',
+            controller: 'LoginCtrl'
+        }).when('/signUp', {
+            templateUrl: 'signUp.html',
+            controller: 'signUpCtrl'
         })
         .otherwise({
             redirectTo: '/'
@@ -34,6 +44,10 @@ App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvide
 
 });
 
-App.run(function(){
-	
+App.run(function($rootScope) {
+    $rootScope.isLogin = false;
+    $rootScope.isDisplayLeftNav = false;
+    $rootScope.showhideLeftNav = function() {
+        $rootScope.isDisplayLeftNav = !$rootScope.isDisplayLeftNav
+    }
 });

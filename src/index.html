@@ -2,7 +2,7 @@
 <html ng-app="App" lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Dashboard app</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <!-- Styles -->
@@ -10,13 +10,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets.min.css" type="text/css" />
     <link rel="stylesheet" href="app.min.css" type="text/css" />
+    <base href="/" />
 </head>
 
 <body>
     <!-- Wrapper-->
-    <div class="wrapper" ng-init="isDisplayLeftNav = true">
+    <div class="wrapper">
         <!-- Header-->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top" ng-if="isLogin">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <div id="mobile-menu">
@@ -26,17 +27,17 @@
                             </a>
                         </div>
                     </div>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="#">
                     Project                    
                 </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <div class="left-nav-toggle">
-                        <button class="toggle-button" ng-click="isDisplayLeftNav =!isDisplayLeftNav"><i class="fa fa-bars"></i></button>
+                        <button class="toggle-button" ng-click="showhideLeftNav()"><i class="fa fa-bars"></i></button>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="versions.html">Versions
+                            <a href="#">Versions
                             <span class="label label-warning pull-right">2</span>
                         </a>
                         </li>
@@ -52,9 +53,9 @@
         </nav>
         <!-- End header-->
         <!-- Navigation-->
-        <aside class="navigation show-hide" ng-show="isDisplayLeftNav">
+        <aside class="navigation show-hide" ng-show="isDisplayLeftNav && isLogin" ng-style="{'width':isDisplayLeftNav ?  '200px': '0'}">
             <nav>
-                <ul class="nav luna-nav">                   
+                <ul class="nav luna-nav">
                     <li class="active">
                         <a href="#">Level 1</a>
                     </li>
@@ -106,16 +107,15 @@
         </aside>
         <!-- End navigation-->
         <!-- main Dashboard-->
-        <section class="content">
-            <div class="container-fluid">
-                <ng-view></ng-view>
-            </div>
-        </section>
+        <ng-view></ng-view>
         <!-- End main Dashboard-->
         <!-- bottom-->
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container-fluid">
-                Sign Up Log In
+        <nav class="navbar navbar-fixed-bottom">
+            <div class="container">
+                <div ng-if="isLogin" class="pull-right" style="margin-top: 30px;">
+                    <a href="/signUp">Register</a>
+                    <a href="/login">Log In</a>
+                </div>
             </div>
         </nav>
         <!-- end bottom-->
