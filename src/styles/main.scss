@@ -1249,7 +1249,7 @@ sup {
     height: 60px;
     padding: 20px 25px;
     font-weight: 400;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     color: #FFFFFF;
 }
 
@@ -2990,14 +2990,36 @@ i {
 .stroke-wifi:before {
     content: "\e64f";
 }
-
+/* added by me */
 .toggle-button {
-    display: inline-block;
-    width: 60px;   
+    display: inline-block;    
     float: left;
     background: transparent;
-    border: navajowhite;
-    color: #FFF;
+    border: navajowhite;   
     font-size: 24px;
     cursor: pointer;
+    outline: none;
+}
+.nav > li > a > img {
+    max-width: none;
+}
+.profil-link img {
+    height: 40px;
+    margin-left: 10px;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+.show-hide {
+  transition: all linear 0.5s;
+}
+.show-hide.ng-hide {
+  opacity: 0;
 }
