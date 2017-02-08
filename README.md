@@ -19,10 +19,15 @@ Features:-
 Quick start
 -----------
 *rm -rf node_modules dist tmp
+
 *npm install  
+
 *bower install
-*bower install angular-bootstrap 
+
+*bower install angular-bootstrap
+
 *bower install font-awesome 
+
 *gulp dev
 
 *Now browse to the app at localhost:8080/index.html.
