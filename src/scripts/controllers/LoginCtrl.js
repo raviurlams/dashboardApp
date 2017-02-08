@@ -1,13 +1,12 @@
-App.controller('LoginCtrl', function($scope, $rootScope, $location) {
+App.controller('LoginCtrl', function($scope, $rootScope, $state) {
+    
     $rootScope.isLogin = false;
     $rootScope.isDisplayLeftNav = false;
-    $location.url('/login');
-    $scope.doSignIn = function(form) {
-        console.log(form)
+    $scope.doSignIn = function(form) {       
         if (form.$valid) {
             $rootScope.isLogin = true;
             $rootScope.isDisplayLeftNav = true;
-            $location.url('/dashboard');
+            $state.go('dashboard');
         }
     }
 });

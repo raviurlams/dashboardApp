@@ -5,7 +5,7 @@
     <title>Dashboard app</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <base href="/" />
+    <base href="/#/"/>
     <!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -108,14 +108,14 @@
         </aside>
         <!-- End navigation-->
         <!-- main Dashboard-->
-        <ng-view></ng-view>
+        <ui-view></ui-view>
         <!-- End main Dashboard-->
         <!-- bottom-->
         <nav class="navbar navbar-fixed-bottom">
             <div class="container-fluid">
                 <div ng-if="isLogin" class="pull-right" style="margin-top: 30px;">
-                    <a href="/signUp">Register</a>
-                    <a href="/login">Log In</a>
+                    <a ui-sref="signUp">Register</a>
+                    <a ui-sref="login">Log In</a>
                 </div>
             </div>
         </nav>
