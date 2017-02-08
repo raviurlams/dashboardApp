@@ -982,6 +982,7 @@ body {
     left: 0;
     bottom: 0;
     top: 0;
+    z-index: 1;
     transition: left 0.3s ease-out;
     -webkit-transition: left 0.3s ease-out;
 }
@@ -3014,7 +3015,7 @@ i {
 }
 
 .img-circle {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 img {
