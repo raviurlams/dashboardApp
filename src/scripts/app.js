@@ -22,7 +22,10 @@ App.config(function($logProvider, $stateProvider, $urlRouterProvider, $httpProvi
     // $httpProvider.interceptors.push('HttpInterceptor');
 
     // $httpProvider.defaults.headers.common.Accept = 'application/json';
-    $locationProvider.html5Mode(true).hashPrefix('#');
+    $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
     $urlRouterProvider.otherwise("/login");
     // Now set up the states 
     $stateProvider

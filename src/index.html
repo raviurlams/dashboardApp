@@ -5,13 +5,11 @@
     <title>Dashboard app</title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <base href="/#/"/>
     <!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets.min.css" type="text/css" />
     <link rel="stylesheet" href="app.min.css" type="text/css" />
-    
 </head>
 
 <body ng-app="App" ng-cloak>
@@ -61,46 +59,43 @@
                         <a href="#">Level 1</a>
                     </li>
                     <li>
-                        <a href="monitoring" data-toggle="collapse" aria-expanded="false">
-                        Level 1<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                        <a href="#collapse1" data-toggle="collapse" data-target="#collapse1">
+                        Level 2<span class="pull-right"> <i class="fa fa-angle-down"></i> </span>
                     </a>
-                        <ul id="monitoring" class="nav nav-second collapse">
+                        <ul id="collapse1" class="nav nav-second collapse">
                             <li><a href="javascript:void(0)"> Test 1</a></li>
                             <li><a href="javascript:void(0)"> Test 2</a></li>
                             <li><a href="javascript:void(0)"> Test 3</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="uielements" data-toggle="collapse" aria-expanded="false">
-                        Level 1<span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
+                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapse2">
+                        Level 3<span class="pull-right"> <i class="fa fa-angle-down"></i> </span>
                     </a>
-                        <ul id="uielements" class="nav nav-second collapse">
+                        <ul id="collapse2" class="nav nav-second collapse">
                             <li><a href="javascript:void(0)">Test 2</a></li>
                             <li><a href="javascript:void(0)">Test 3</a></li>
                             <li><a href="javascript:void(0)">Test 4</a></li>
                             <li><a href="javascript:void(0)">Test 5</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#extras" data-toggle="collapse" aria-expanded="false">
-                        Basic <span class="pull-right"> <i class="fa fa-angle-down" aria-hidden="true"></i> </span>
-                    </a>
-                        <ul id="extras" class="nav nav-second collapse">
-                            <li><a href="javascript:void(0)">Test 2</a></li>
-                            <li><a href="javascript:void(0)">Test 2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <span class="badge pull-right">2</span> Versions
-                        </a>
-                    </li>
                     <li class="nav-info">
                         <i class="pe pe-7s-shield text-accent"></i>
                         <div class="m-t-xs">
-                            <span class="c-white">
-                                Sub child
-                            </span>
+                            <li>
+                                <a href="javascript:void(0)" data-toggle="collapse" data-target="#collapse3">
+                        Basic <span class="pull-right"> <i class="fa fa-angle-down"></i> </span>
+                    </a>
+                                <ul id="collapse3" class="nav nav-second collapse">
+                                    <li><a href="javascript:void(0)">Test 2</a></li>
+                                    <li><a href="javascript:void(0)">Test 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="badge pull-right">2</span> Versions
+                                </a>
+                            </li>
                         </div>
                     </li>
                 </ul>
