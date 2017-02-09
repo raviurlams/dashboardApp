@@ -6,12 +6,12 @@ angular.module('templates', []);
 /*
  Main application module.
 */
-var App = angular.module('App', ['ngRoute', 'ngResource', 'templates','ui.bootstrap']);
+var App = angular.module('App', ['ui.router', 'ngResource', 'templates', 'ui.bootstrap', 'ngMessages']);
 
 /*
  App configuration. Enable things as needed.
 */
-App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvider, $locationProvider) {
+App.config(function($logProvider, $stateProvider, $urlRouterProvider, $httpProvider, $compileProvider, $locationProvider) {
 
     var enableDebug = localStorage.debug == true; // jshint ignore:line
 
@@ -22,22 +22,27 @@ App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvide
     // $httpProvider.interceptors.push('HttpInterceptor');
 
     // $httpProvider.defaults.headers.common.Accept = 'application/json';
-    //$locationProvider.html5Mode(true).hashPrefix('#');
-    $routeProvider        
-        .when('/dashboard', {
-            templateUrl: 'home.html',
-            controller: 'HomeCtrl'
-        }).when('/login', {
-            templateUrl: 'Login.html',
+    $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
+    $urlRouterProvider.otherwise("/login");
+    // Now set up the states 
+    $stateProvider
+        .state('login', {
+            url: "/login",
+            templateUrl: "Login.html",
             controller: 'LoginCtrl'
-        }).when('/signUp', {
-            templateUrl: 'signUp.html',
-            controller: 'signUpCtrl'
         })
-        .otherwise({
-            redirectTo: '/login'
-        });
-
+        .state('signUp', {
+            url: "/signUp",
+            templateUrl: "signUp.html",
+            controller: 'signUpCtrl'
+        }).state('dashboard', {
+            url: "/dashboard",
+            templateUrl: "home.html",
+            controller: 'HomeCtrl'
+        })
 });
 
 App.run(function($rootScope) {

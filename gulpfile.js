@@ -18,13 +18,14 @@ var stylish = require('jshint-stylish');
 var connect = require('gulp-connect');
 
 var assets = {
-  scripts: [
-    'assets/jquery/dist/jquery.min.js',
+  scripts: [    
     'assets/angular/angular.min.js',
-    'assets/angular-route/angular-route.min.js',
-    'assets/angular-resource/angular-resource.min.js',
     'assets/angular-bootstrap/ui-bootstrap.min.js',
-    'assets/angular-bootstrap/ui-bootstrap-tpls.min.js'
+    'assets/angular-bootstrap/ui-bootstrap-tpls.min.js',
+    'assets/angular-messages/angular-messages.min.js',
+    'assets/angular-resource/angular-resource.min.js',
+    'assets/angular-ui-router/release/angular-ui-router.min.js',   
+    'assets/jquery/dist/jquery.min.js'
   ],
   styles: [
     'assets/bootstrap/dist/css/bootstrap.min.css',    
@@ -116,7 +117,7 @@ gulp.task('jshint', () => {
  */
 gulp.task('watch', () => {
   gulp.watch([app.scripts], ['app-scripts', 'jshint']);
-  gulp.watch([app.styles], ['app-styles']);
+  gulp.watch([app.styles], ['app-styles']);  
   gulp.watch([app.views, app.index], ['app-views']);
 });
 

@@ -520,6 +520,7 @@ body {
     background-color: #24262d;
     left: 0;
     top: 0;
+    z-index: 1;
     transition: left 0.3s ease-out;
     -webkit-transition: left 0.3s ease-out;
 }
@@ -581,9 +582,15 @@ body.blank .content {
     margin: 0;
 }
 
+<<<<<<< HEAD
 .container-centers {
     max-width: 400px;
     margin: 10% auto 0;
+=======
+.container-center {
+    max-width: 404px;
+    margin: 2% auto 0;
+>>>>>>> 663a50c4b3fe845519a5bcd215ceadab93366e2d
     padding: 20px;
 }
 
@@ -2244,7 +2251,7 @@ i {
 }
 
 .img-circle {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 img {
