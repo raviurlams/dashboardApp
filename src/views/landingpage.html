@@ -1,0 +1,32 @@
+<div class="container-centers animated slideInDown">
+    <div class="view-headers">
+        <div class="header-icon">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <div class="header-title">
+            <h3>Login</h3>
+            <small>Please enter your credentials to login.</small>
+        </div>
+    </div>
+    <div class="panel panel-filled">
+        <div class="panel-body">
+            <form name="loginForm" novalidate>
+                <div class="form-group">
+                    <label class="control-label" for="username">Username</label>
+                    <input type="email" placeholder="example@gmail.com" title="Please enter you username" name="username" class="form-control" ng-model="formData.username" required>
+                    <span ng-show="loginForm.username.$error.required && loginForm.username.$dirty" class="help-block small">Your unique username to app</span>
+                    <span ng-show="!loginForm.username.$error.required && loginForm.username.$error.username && loginForm.username.$dirty" class="help-block small">invalid
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="password">Password</label>
+                    <input type="password" name="password" ng-model="formData.password" title="Please enter your password" placeholder="******" class="form-control" required>                  
+                    <span ng-show="loginForm.password.$error.required && loginForm.password.$dirty" class="help-block small">Your strong password</span>
+                </div>
+                <div>
+                    <a class="btn btn-default" ng-click="doSignIn(loginForm)">Login</a>                    
+                    <a class="btn btn-default" ui-sref="signUp">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

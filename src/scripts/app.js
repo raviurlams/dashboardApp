@@ -26,9 +26,14 @@ App.config(function($logProvider, $stateProvider, $urlRouterProvider, $httpProvi
   enabled: true,
   requireBase: false
 });
-    $urlRouterProvider.otherwise("/login");
+    $urlRouterProvider.otherwise("/landingpage");
     // Now set up the states 
     $stateProvider
+        .state('landingpage', {
+                url: "/login",
+                templateUrl: "landingpage.html",
+                controller: 'landingpageCtrl'
+            })
         .state('login', {
             url: "/login",
             templateUrl: "Login.html",
