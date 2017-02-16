@@ -13,7 +13,7 @@
 
         return methods;
 
-        /* method imple*/
+        /* method implementaions*/
 
         function loadJSONFile(filePath) {
             var deferred = $q.defer();

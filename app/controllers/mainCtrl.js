@@ -55,7 +55,6 @@
             }
         }
 
-
         $scope.validateRePassword = function(obj) {
             if (!isNullOrEmpty(obj.password.$viewValue) && !isNullOrEmpty(obj.repassword.$viewValue) && (obj.password.$viewValue !== obj.repassword.$viewValue)) {
                 $scope.isMatchPassword = false;
