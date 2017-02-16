@@ -2,7 +2,7 @@
     'use strict';
     dashboardUIApp.constant('appConfiguration', {
         datafiles: '/data/',
-        templatePath: './app/templates/',
+        templatePath: './templates/',
         debugmode: false,
         signIn: '/Login',
         signInState: 'signIn',
