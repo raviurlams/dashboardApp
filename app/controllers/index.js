@@ -1,1 +1,1 @@
-require('./../controllers/mainCrtl')
+require('./../controllers/mainCtrl')

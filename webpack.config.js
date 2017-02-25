@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: './app/index.js'
+        app: './app/index.js'
     },
     output: {
         path: __dirname + '/static',
@@ -52,7 +52,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpg|png|gif)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[hash].[ext]',

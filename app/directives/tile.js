@@ -1,18 +1,18 @@
 (function() {
     'use strict';
-    dashboardUIApp.directive('tile', ['appConfiguration', sappTile]);
+    angular.module('dashboardApp').directive('tile', ['appConfiguration', sappTile]);
 
     function sappTile(appConfiguration) {
         return {
             restrict: 'E',
             replace: true,
             scope: {},
-            templateUrl: appConfiguration.templatePath + 'sappTile.html',
+            template: require('./../templates/sappTile.html'),
             controller: function($scope, $element, $attrs) {
-
+                console.log('calling directive constroller');
             },
             link: function(scope, element, attrs, ctrl) {
-
+                console.log('calling directive link function');
             }
         }
     }

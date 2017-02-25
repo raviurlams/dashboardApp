@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    dashboardUIApp.factory('$ajaxFactory', ['$http', '$q','appConfiguration', ajaxFactory]);
+    angular.module('dashboardApp').factory('$ajaxFactory', ['$http', '$q','appConfiguration', ajaxFactory]);
 
     function ajaxFactory($http, $q,appConfiguration) {
 

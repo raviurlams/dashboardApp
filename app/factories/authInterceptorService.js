@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    dashboardUIApp.factory('authInterceptorService', ['$q', '$location', 'appConfiguration', 'localStorageService',
+    angular.module('dashboardApp').factory('authInterceptorService', ['$q', '$location', 'appConfiguration', 'localStorageService',
         function($q, $location, appConfiguration, localStorageService) {
 
             var authInterceptorServiceFactory = {};
