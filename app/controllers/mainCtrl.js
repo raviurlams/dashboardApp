@@ -12,7 +12,7 @@
         $scope.isErorMsg = false;
 
 
-        $scope.validateUser = function(form) {
+        $scope.validateUser = function(e,form) {
             if (form && form.$valid) {
                 $scope.isErorMsg = false;
                 $scope.loginFormObj.$setPristine();

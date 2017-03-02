@@ -1,67 +1,52 @@
-<div class="container">
-    <div class="rowMargin">
-
-        <div id="u59" class="ax_default imagelogo">
-            <img id="u59_img" class="img " src="http://mangobilling.com/wp-content/uploads/2016/05/Mango-Billing-Logo.png">
-            <p class="mango-cap"><span>An All-In-One Billing Solution</span></p>
+<div id="login-overlay" class="modal-dialog logincontainer">
+    <div class="text-center logo">
+        <img class="img " src="http://dxlfb468n8ekd.cloudfront.net/gsc/FPNX1V/ff/e1/33/ffe1337e4e884fb49a363d0df8abcd5f/images/login/u7.png?token=b4554a83ceb50e2a6cf76e4ef7a6017b">
+        <div class="logolabel">
+            <p><span>An All-In-One Billing Solution</span></p>
         </div>
-
-        <div class="col-md-12 content">
-            <div class="cpanel">
-                <div class="panel-body">
-                    <form name="loginFormObj" form-type="nonavigation" novalidate>
-                        <div class="text-center m-b-md">
-                            <h3>Sign In</h3>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="username">Username</label>
-                            <strong class="glyphicons glyphicons-asterisk font-color-ff font-100">*</strong>
-                            <input type="text" value="Email" name="username" ng-model="loginFormObj.usernameStr" class="form-control" autocomplete="off" required>
-                            <!-- Validations -->
-                            <div ng-messages="loginFormObj.username.$error" class="validation-msg" ng-show="((loginFormObj.$submitted || !loginFormObj.username.$pristine))">
-                                <div ng-message="required">This field is required</div>
+    </div>
+    <div class="modal-content">
+        <div class="modal-body padding-zero">
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="well bg-color-none  k-content">
+                        <h4 class="modal-title text-center text-color">Sign In</h4>
+                        <form name="loginForm" method="POST" ng-submit="validateUser($event,loginForm)" novalidate="novalidate">
+                            <ul class="fieldlist">
+                                <li>
+                                    <input type="text" class="k-textbox input" name="username" autocomplete="off" placeholder="Username" required/>
+                                </li>
+                                <li>
+                                    <input type="text" class="k-textbox input" name="password" autocomplete="off" placeholder="Password" required/>
+                                </li>
+                            </ul>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checked-checkbox" class="k-checkbox" checked="checked">
+                                <label class="k-checkbox-label" for="checked-checkbox"> Keep Me Signed In</label>
                             </div>
+                            <button class="k-button k-primary button" type="submit">Login</button>
+                        </form>
+                        <div class="pull-right text-label">
+                            <a class="k-link" href="#">
+                                Forgot Your Passsword?
+                            </a>
                         </div>
-
-                        <div class="form-group">
-                            <label class="control-label" for="password">Password</label>
-                            <strong class="glyphicons glyphicons-asterisk font-color-ff font-100">*</strong>
-                            <input type="password" value="Password" name="passwordStr" ng-model="loginFormObj.password" class="form-control" autocomplete="off" required>
-                            <!-- Validations -->
-                            <div ng-messages="loginFormObj.passwordStr.$error" class="validation-msg" ng-show="((loginFormObj.$submitted || !loginFormObj.passwordStr.$pristine))">
-                                <div ng-message="required">This field is required</div>
-                            </div>
+                        <div class="pull-left bottom-label">Try Mango Billing free for 30 days!</div>
+                        <div class="pull-left create-label">
+                            <a class="k-link" href="#">
+                               Create My Account
+                            </a>
                         </div>
-
-                        <div class="form-group">
-                            <input type="checkbox" value="checkbox" ng-model="loginFormObj.checkbox" class="form-control" style="
-                                width: 12px; checked=" ">
-                            <label  class="control-label checkbox-style">Keep Me Signed In</label>
-                        </div>
-
-                        <div ng-if="isErorMsg " class="form-group validation-msg ">Invalid Username/Password.</div>
-
-                        <div class="form-group ">
-                            <button class="btn btn-success-style " type="submit " ng-click="validateUser(loginFormObj) ">Login</button>
-                        </div>
-
-                        <div class="form-group ">
-                            <a ui-sref="resetPwd " class="btn btn-link float-right ">Forgot Your Passsword?</a>
-                        </div>
-                        <div class="gap "></div>
-                        <div class="customHr ">.</div>
-
-                        <div class="form-group ">
-                            <a ui-sref="signUp " class="btn btn-link ">Create My Account</a>
-                        </div>
-
-            
-
-                        <!-- <div class="text-center pull-left ">
-                            <button class="btn btn-success " type="submit " ng-click="validateUser(loginFormObj) ">Login</button>
-                            <button class="btn btn-default " ui-sref="signUp ">Register</button>
-                        </div> -->
-                    </form>
+                    </div>
+                </div>
+                <div class="col-xs-5 padding-zero">
+                    <div class="form-heading">
+                        <p><span>Get Paid Faster With Your</span></p>
+                        <p><span>Own Custom Client Portal!</span></p>
+                    </div>
+                    <div>
+                        <img class="img header-img" src="http://d26uhratvi024l.cloudfront.net/gsc/FPNX1V/ff/e1/33/ffe1337e4e884fb49a363d0df8abcd5f/images/login/u1.png?token=3ed78250287e050fb89ef8cc32243280">
+                    </div>
                 </div>
             </div>
         </div>
