@@ -11,20 +11,28 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- CSS library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">    
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.common.min.css">
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.1.319/styles/kendo.default.min.css">
 </head>
 
 <body ng-app="dashboardApp" ng-cloak>
-    <div>
+    <div class="bgcolor">
         <ui-view></ui-view>
     </div>
-    <footer class="footer text-center">
-        <span>©2011-2017, Mango Billing, All Rights Reserved..</span>
-        <ul class="list-inline hidden-sm hidden-xs pull-right">
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-        </ul>
-    </footer>
+    <div>
+        <footer>
+            <span>©2011-2017, Mango Billing, All Rights Reserved..</span>
+            <ul class="list-inline hidden-sm hidden-xs pull-right">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </footer>        
+    </div>
     <div class="process" ng-show="showProcessing">
         <img ng-src="{{$root.loadingUrl}}" width="40" height="40" margin-left="0px" alt="Loading">
     </div>
